@@ -14,7 +14,7 @@ To identify possible anti-patterns, these are the simple questions to be asked o
 | Is team cross skilled and cross functional? | Yes |   | ✓ | ✓ |   | [↓](#Is-there-a-devops-team?-Or-do-you-do-devops?) |
 
 
-### Do you have more than 3 statuses (ToDo, InProgress, Done) for a backlog item? (yes)
+### Do you have more than 3 statuses (ToDo, InProgress, Done) for a backlog item? [![Anti-Agile](https://img.shields.io/badge/<Anti>-<Agile>-<Red>.svg)](https://shields.io/)
 - [Agile manifesto](https://agilemanifesto.org) emphasizes a working product over complicated process.With a multi status complex workflow, a large process overhead is added rather than creation of working product
 - Statuses are driven by a workflow. Too many statuses in a workflow means:
 	- If time spent in each status is worth recording, than too many statuses combined together indicate a longer, hence anti-Agile iteration. _The fundamental Agility principle is FAIL FAST, LEARN AND APPLY CORRECTION FAST_. Longer iteration make failures correction longer (more work piled up due to longer iteration) & later (longer iteration to realize failure).
