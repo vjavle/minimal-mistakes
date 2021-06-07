@@ -9,13 +9,13 @@ To identify possible anti-patterns, these are the simple questions to be asked o
 
 <details>
   <summary><b>Do you have more than 3 statuses (ToDo, InProgress, Done) for a backlog item? </b> <img src="https://img.shields.io/badge/Anti-Agile-red.svg"></summary>
-  
-  - [Agile manifesto](https://agilemanifesto.org) emphasizes a working product over complicated process.With a multi status complex workflow, a large process overhead is added rather than creation of working product
-  - Statuses are driven by a workflow. Too many statuses in a workflow means:
-     1. If time spent in each status is worth recording, than too many statuses combined together indicate a longer, hence anti-Agile iteration. _The fundamental Agility principle is FAIL FAST, LEARN AND APPLY CORRECTION FAST_. Longer iteration make failures correction longer (more work piled up due to longer iteration) & later (longer iteration to realize failure).
-     2. Too many stauses and complicated process can be hard for tem to remember and follow and can cause [![Confusion](https://raw.githubusercontent.com/vjavle/vjavle.github.io/master/assets/images/sprintconfusion.png)](http://www.youtube.com/watch?v=Bw5LuY31C7w)
-  - Many teams start with multistage workflow approach with a goal of ultra optimizing time spent on each stage. This needs elaborate **time capture** and **reporting** mechanism for every workflow stage. This is a large process management overhead, which defeats the purpose of simplicity in Agility.
-As is software is complex, some waste is inevitable. The point of smaller Agile iteration (e.g. Sprint) is to accept but reduce the waste.
+
+  - [Agile manifesto](https://agilemanifesto.org) emphasizes a working product over complicated process.With a multi status complex workflow, a large process overhead is added rather than creation of working product  
+  - Statuses are driven by a workflow. Too many statuses in a workflow means:  
+     1. If time spent in each status is worth recording, than too many statuses combined together indicate a longer, hence anti-Agile iteration. _The fundamental Agility principle is FAIL FAST, LEARN AND APPLY CORRECTION FAST_. Longer iteration make failures correction longer (more work piled up due to longer iteration) & later (longer iteration to realize failure).  
+     2. Too many stauses and complicated process can be hard for tem to remember and follow and can cause [![Confusion](https://raw.githubusercontent.com/vjavle/vjavle.github.io/master/assets/images/sprintconfusion.png)](http://www.youtube.com/watch?v=Bw5LuY31C7w)  
+  - Many teams start with multistage workflow approach with a goal of ultra optimizing time spent on each stage. This needs elaborate **time capture** and **reporting** mechanism for every workflow stage. This is a large process management overhead, which defeats the purpose of simplicity in Agility.As is software is complex, some waste is inevitable. The point of smaller Agile iteration (e.g. Sprint) is to accept but reduce the waste.  
+
 </details>
 
 <details>
