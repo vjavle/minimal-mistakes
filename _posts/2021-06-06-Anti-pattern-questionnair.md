@@ -10,10 +10,15 @@ To identify possible anti-patterns, these are the simple questions to be asked o
 <details>
   <summary><b>Do you have more than 3 statuses (ToDo, InProgress, Done) for a backlog item? </b> <img src="https://img.shields.io/badge/Anti-Agile-red.svg"></summary>
   <ul>
-  <li> [Agile manifesto](https://agilemanifesto.org) emphasizes a working product over complicated process.With a multi status complex workflow, a large process overhead is added rather than creation of working product  </li>
+  <li> <a href="https://agilemanifesto.org">Agile manifesto</a> emphasizes a working product over complicated process.With a multi status complex workflow, a large process overhead is added rather than creation of working product  </li>
   <li> Statuses are driven by a workflow. Too many statuses in a workflow means:  
     <ol>
-     <li> If time spent in each status is worth recording, than too many statuses combined together indicate a longer, hence anti-Agile iteration. _The fundamental Agility principle is FAIL FAST, LEARN AND APPLY CORRECTION FAST_. Longer iteration make failures correction longer (more work piled up due to longer iteration) & later (longer iteration to realize failure)</li>
+     <li> If time spent in each status is worth recording, then too many statuses combined together indicate a longer, hence anti-Agile iteration
+       <ul>
+       <li>The fundamental Agility principle is FAIL FAST, LEARN AND APPLY CORRECTION FAST</li>
+       <li>Longer iteration make failures correction longer (more work piled up due to longer iteration) & later (longer iteration to realize failure)</li>
+       </ul>
+      </li>
      <li> Too many stauses and complicated process can be hard for tem to remember and follow and can cause [![Confusion](https://raw.githubusercontent.com/vjavle/vjavle.github.io/master/assets/images/sprintconfusion.png)](http://www.youtube.com/watch?v=Bw5LuY31C7w)  </li>
     </ol>      
   </li>  
