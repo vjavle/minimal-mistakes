@@ -19,7 +19,9 @@ To identify possible anti-patterns, these are the simple questions to be asked o
        <li>Longer iteration make failures correction longer (more work piled up due to longer iteration) & later (longer iteration to realize failure)</li>
        </ul>
       </li>
-     <li> Too many stauses and complicated process can be hard for tem to remember and follow and can cause [![Confusion](https://raw.githubusercontent.com/vjavle/vjavle.github.io/master/assets/images/sprintconfusion.png)](http://www.youtube.com/watch?v=Bw5LuY31C7w)  </li>
+     <li> Too many stauses and complicated process can be hard for tem to remember and follow and can cause <br/>
+       <a href="http://www.youtube.com/watch?v=Bw5LuY31C7w"><img src="https://raw.githubusercontent.com/vjavle/vjavle.github.io/master/assets/images/sprintconfusion.png" alt="Confusion"></a>
+     </li>
     </ol>      
   </li>  
   <li>  Many teams start with multistage workflow approach with a goal of ultra optimizing time spent on each stage. This needs elaborate <b>time capture</b> and <b>reporting</b> mechanism for every workflow stage. This is a large process management overhead, which defeats the purpose of simplicity in Agility.As is software is complex, some waste is inevitable. The point of smaller Agile iteration (e.g. Sprint) is to accept but reduce the waste   </li>
