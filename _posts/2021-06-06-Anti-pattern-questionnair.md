@@ -40,9 +40,10 @@ To identify possible anti-patterns, these are the simple questions to be asked o
 
 <details>
   <summary><b>Is team cross skilled and cross functional?  No </b> <img src="https://img.shields.io/badge/Anti-Agile-red.svg"> <img src="https://img.shields.io/badge/Anti-devops-red.svg"></summary>
-  
-  - Cross skilled - when each team member of the team can work on at least 2 layers of a functional stack (e.g. UI and Services or Services and DB or DB and Infrastructure code)
-   - Cross functional - when a developer can function as a tester or vice versa or each team member perform a function of production support.
-  - Is there a separate database team? Or is there a separate testing team? If you do, the spirit of continuous integration is lost right there.
-  - Loss of continuous integration leads to anti agile (time lost waiting for other layer team to complete their work, only then to be integrated)
+    <ul>
+    <li>Cross skilled - when each team member of the team can work on at least 2 layers of a functional stack (e.g. UI and Services or Services and DB or DB and Infrastructure code)</li>
+    <li>Cross functional - when a developer can function as a tester or vice versa or each team member perform a function of production support</li>
+    <li>Is there a separate database team? Or is there a separate testing team? If you do, the spirit of continuous integration is lost right there</li>
+    <li>Loss of continuous integration leads to anti agile (time lost waiting for other layer team to complete their work, only then to be integrated)</li>
+    </ul>      
 </details>
