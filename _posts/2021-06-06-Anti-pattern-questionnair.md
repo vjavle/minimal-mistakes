@@ -8,7 +8,7 @@ published: true
 To identify possible anti-patterns, these are the simple questions to be asked of a team.
 
 <details>
-  <summary><b>Do you have more than 3 statuses (ToDo, InProgress, Done) for a backlog item? </b> <img src="https://img.shields.io/badge/Anti-Agile-red.svg"></img></summary>
+  <summary><b>Do you have more than 3 statuses (ToDo, InProgress, Done) for a backlog item? </b> <img src="https://img.shields.io/badge/Anti-Agile-red.svg"></summary>
   
   - [Agile manifesto](https://agilemanifesto.org) emphasizes a working product over complicated process.With a multi status complex workflow, a large process overhead is added rather than creation of working product
   - Statuses are driven by a workflow. Too many statuses in a workflow means:
@@ -19,7 +19,7 @@ As is software is complex, some waste is inevitable. The point of smaller Agile 
 </details>
 
 <details>
-  <summary><b>Is there a devops team? Or do you do devops?</b> <img src="https://img.shields.io/badge/Anti-Agile-red.svg"></img> <img src="https://img.shields.io/badge/Anti-devops-red.svg"></img></summary>
+  <summary><b>Is there a devops team? Or do you do devops?</b> <img src="https://img.shields.io/badge/Anti-Agile-red.svg"> <img src="https://img.shields.io/badge/Anti-devops-red.svg"></summary>
   
   - devops is a culture, not a team
   - You don't DO devops. You adopt devops culture
@@ -28,7 +28,7 @@ As is software is complex, some waste is inevitable. The point of smaller Agile 
 </details>
 
 <details>
-  <summary><b>Is team cross skilled and cross functional?</b> <img src="https://img.shields.io/badge/Anti-Agile-red.svg"></img> <img src="https://img.shields.io/badge/Anti-devops-red.svg"></img></summary>
+  <summary><b>Is team cross skilled and cross functional?</b> <img src="https://img.shields.io/badge/Anti-Agile-red.svg"> <img src="https://img.shields.io/badge/Anti-devops-red.svg"></summary>
   
   - Cross skilled - when each team member of the team can work on at least 2 layers of a functional stack (e.g. UI and Services or Services and DB or DB and Infrastructure code)
    - Cross functional - when a developer can function as a tester or vice versa or each team member perform a function of production support.
