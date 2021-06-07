@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Anti pattern questionnair
+author_profile: true
 published: true
 ---
 # Anti pattern questionnair
