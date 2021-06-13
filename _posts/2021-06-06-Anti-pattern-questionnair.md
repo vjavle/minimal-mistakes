@@ -3,8 +3,7 @@ title: Anti pattern questionnair
 author_profile: true
 published: true
 ---
-# Anti pattern questionnair
-## An anti-pattern is a common response to a recurring problem that is usually ineffective and risks being highly counterproductive
+# An anti-pattern is a common response to a recurring problem that is usually ineffective and risks being highly counterproductive
 
 
 To identify possible anti-patterns, these are the simple questions to be asked of a team.
