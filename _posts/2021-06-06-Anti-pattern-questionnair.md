@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: home
 title: Anti pattern questionnair
 author_profile: true
 published: true
