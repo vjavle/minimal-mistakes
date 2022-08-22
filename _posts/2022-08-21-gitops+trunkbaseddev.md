@@ -89,7 +89,7 @@ But if the unchanging unsecure configurations are too many, perhaps they can bec
 ### 4. Approved changes that can be automatically applied to the system
 **Issue #2 -** PR approval being only trigger for new deployment. 
 
-This principle usually means git PR approval. But hence lies the problem, if the solution is applies for issue #1 above. What if the state of a secret changes? One changes password or some encrypted key? How will that configuration be automatically be pushed by a PR approval?
+This principle usually means git PR approval. But hence lies the problem, if the solution is applied for issue #1 above. What if the state of a secret changes? One changes password or some encrypted key? How will that configuration be automatically be pushed by a PR approval?
 
 **Summary Solution -**
 If gitops suggests "**The entire system described declaratively**" and "**Approved changes that can be automatically applied to the system**" (approval of course, whether manual approval or some automatic super automated testing gates), then CD pipeline should have 2 separate triggers with either/or condition.
