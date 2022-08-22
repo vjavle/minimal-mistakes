@@ -21,7 +21,7 @@ To identify possible anti-patterns, these are the simple questions to be asked o
        </ul>
       </li>
      <li> Too many stauses and complicated process can be hard for tem to remember and follow and can cause <br/>
-       <a href="http://www.youtube.com/watch?v=Bw5LuY31C7w"><img src="https://raw.githubusercontent.com/vjavle/vjavle.github.io/master/assets/images/deployments.png" alt="Confusion" width="377" height="273"></a>
+       <a href="http://www.youtube.com/watch?v=Bw5LuY31C7w"><img src="https://raw.githubusercontent.com/vjavle/vjavle.github.io/master/assets/images/confusion.png" alt="Confusion" width="377" height="273"></a>
      </li>
     </ol>      
   </li>  
