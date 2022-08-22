@@ -1,8 +1,8 @@
 # gitops+Trunk-dev
 2 hot words in software these days are [**gitops**](https://www.weave.works/technologies/gitops/) and [**trunk based development**](https://trunkbaseddevelopment.com/). I realized some gaps in adapting both at the same time as per prescriptions.
 
-This a quick note describes gitops and trunkbaseddev and their quick pro/cons. But they are plenty of articles out there to know more about these.
-More importantly, this note describes how I see the gaps and adapt them at the both practices at the same time.
+This a quick note describes gitops and trunkbaseddev and their quick pro/cons. But plenty of articles out there to know more about these.
+More importantly, this note describes how I see the issues is adapting both practices at same time and possible solutions.
 
 ## What is Trunk Based Development:
 It's simple as it says. Develop on trunk and deploy from trunk. For the gitflow fanatics and branching addicts, meetings freeze at the utterance of developing on one single branch. But, yes, for those who have lived , branching and merging hell, this concept doesn't sound as bad (in fact , a sigh of relief).
