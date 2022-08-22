@@ -107,5 +107,5 @@ Now all of this is good. But there remains the problem with the biggest state wi
 If your database is code driven (like structure is defined by code , e.g. table and schema definitions), it makes it harder to implement Blue/Green, Canary and Disaster rollback difficult, if not impossible.
 
 God forbid, your DB is not infested with sproc and trigger code.
-Coming from 20 years of SQL back ground, it me slow and steady 3 years to understand, adopt no SQL databases.
+Coming from 20 years of SQL back ground, it took me slow and steady 3 years to understand, adapt no SQL databases. With hard structure dependent upon codified DDL is gone, rollbacks and canaries are vastly possible.
 But that's a whole different conversion i.e. SQL or no SQL db.
