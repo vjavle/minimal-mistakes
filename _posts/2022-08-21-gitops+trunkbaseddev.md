@@ -25,7 +25,7 @@ When someone needs to branch, these questions deserve answers:
 - **Blue/Green, Canary deployments and rollbacks** - using feature flags, behavior of code (finished or unfinished) can be put to test very easily.
 
 ### Con of Trunk Based Dev
-Trunk Based development does have a **con** as well. There is no escape of advancing parts of software at their own pace. Some do it in branches, some do it within code. By doing in code, one gets above benefits. But without proper structure and frameworks, code can get a big switch statement.
+Trunk Based development does have a **con** as well. There is no escape from advancing parts of software at their own pace. Some do it in branches, some do it within code. By doing in code, one gets above benefits. But without proper structure and frameworks, code can get a big switch statement.
 
 ### Summary
 Even with Trunk based dev and use of git, it is expected to have PR branches and hot fix branches. PR branches should not exists beyond 4 hours. Hot fix release branches should not exist beyond end of the current sprint.
@@ -41,23 +41,26 @@ This is the one I like the most. No matter if plane strikes into towers or an as
  - All data centers are "almost" equal and
  - not all data centers are destroyed and
  - the undestroyed data centers are reachable etc
+
 There are certain principles also need to be followed when describing system state:
- - IP address range overlap is addressed
+ - state of same system when deployed again could be different - e.g. IP address ranges could change
  - System is not data center state full
 
-### 2. Software agents to ensure correctness and alert on divergence -
+### 2. Software agents to ensure correctness and alert on divergence
 There are plenty of ways of ensuring the environment drift and alert based on state drift. Perhaps it needs a note of it's own.
-### 3. The canonical desired system state versioned in Git -
-This is where I have a slight problem. While a good principle, I think it prescribes , git for all types of states. In my experience, statefull-ness of system lies in couple places e.g.
+### 3. The canonical desired system state versioned in Git
+This principle is issue #1 - storing state of system in git. 
+
+While a good principle, I think it prescribes , git for all types of states. In my experience, statefull-ness of system lies in couple places e.g.
  1. A state based infra structure provisioning system e.g. Terraform - hence tf state files
  2. Secure and un secure configuration
 Thankfully, the most core STATE of the system, Business Data , is not assumed to be in git. It's a function of a database (any kind relational or unstructured).
 
 There is not much reservation in tf statefiles in git, except, maybe performance while using http backend , but I do have opinions on secure and unsecure configurations being stored in git. Here is my view:
 - CI pipeline creates a verified artifacts by Continuously Integrating code from all branches into a branch
-- Artifact is created and committed to an artifactory (stealing the sexy jfrog term, but this can be azure devops artifacts or in a containerized world , registry)
+- Artifact is created and committed to an artifactory (stealing the sexy jfrog term, but this can be devops artifacts or in a containerized world , registry)
 - Deployment is a combination of:
-    - static verified (tested, signed etc.) artifact (whether application bit or tf files, whether zip or container)
+    - static verified (tested, signed etc.) artifact (whether application bits or tf files, whether zip or container)
     - necessary configuration for env where it is being deployed (conn strings, passwords etc)
 - CD pipeline is responsible to promote this artifact through various environment life cycles e.g. dev, qa, staging, ephemeral etc. by combining  artifacts with secure and unsecure configuration necessary for the environment being deployed.
 
@@ -78,16 +81,19 @@ This is where I find issue - By committing unsecure configs for environments int
 - configurations of ephemeral environments can creep into source control (which are meaningless because of the life time of ephemeral env) or
 - conventions (e.g. naming convention) of ephemeral environments can creep into into  code
 
-Ideally , all 4 configurations above should be coming from unsecure and secure config stores (e.g. AppConfig/KeyVault in Azure or ).
+Ideally , all 4 configurations above should be coming from unsecure and secure config stores (e.g. AppConfig/KeyVault in Azure or parameter store/secrets manager in AWS).
 But if the unchanging unsecure configurations are too many, perhaps they can become part of git repo.
-### 4. Approved changes that can be automatically applied to the system -
+
+**Summary Solution -** System state is stored in combination of git and secure/unsecure config versioned stores.
+### 4. Approved changes that can be automatically applied to the system
+This principle is issue #2 - PR approval being only trigger for new deployment. 
+
 This principle usually means git PR approval. But hence lies the problem, even with gitops principle of storing secrets in secure store. What if the state of a secret changes? One changes password or some encrypted key? How will that configuration be automatically be pushed by a PR approval?
 
-This is where I apply gitops triggers somewhat differently for configurations.
-
+**Summary Solution -**
 If gitops suggests "**The entire system described declaratively**" and "**Approved changes that can be automatically applied to the system**" (approval of course, whether manual approval or some automatic super automated testing gates), then CD pipeline should have 2 separate triggers with either/or condition.
-Change in latest artifact (or container)
-Change in configuration (secure and unsecure)
+  1. Change in latest artifact (or container)
+  2. Change in configuration (secure and unsecure)
 
 If one has to follow gitops principle of maintaining state of entire system (hence system can be reproduced with any version - of git as well secure/unsecure config store), it is important to choose a config store which maintains version history of configuration changes as well. Most modern config stores, if not all, do maintain history.
 Depending the implementation CD, it is important to link code/bit artifact version with configuration versions to maintain compatibility.
