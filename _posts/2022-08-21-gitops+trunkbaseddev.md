@@ -19,6 +19,7 @@ When someone needs to branch, these questions deserve answers:
 - Immutable components
 - Interface Versioning and maintaining compatibility
 - Use of feature flags
+
 ### Pro of Trunk Based Dev
 - **No or minimal integration efforts** - By using these techniques, one usually follows true spirit of Continuous Integration. One has less need or less efforts to "integrate" or merge each other's code. (For those , to whom merge only means source code merge, it's not so. Integration and/or merge of 2 code bases should require test cases written for each code bases to pass, at the least unit, at best integration or end to end).
 - **Ship code faster to prod** - No matter how much tested in house, real test of code is in front of end user. Not only functional test, but non-functional (perf/security) and acceptance.
@@ -49,7 +50,7 @@ There are certain principles also need to be followed when describing system sta
 ### 2. Software agents to ensure correctness and alert on divergence
 There are plenty of ways of ensuring the environment drift and alert based on state drift. Perhaps it needs a note of it's own.
 ### 3. The canonical desired system state versioned in Git
-This principle is issue #1 - storing state of system in git. 
+**Issue #1 -** storing state of system in git. 
 
 While a good principle, I think it prescribes , git for all types of states. In my experience, statefull-ness of system lies in couple places e.g.
  1. A state based infra structure provisioning system e.g. Terraform - hence tf state files
@@ -86,9 +87,9 @@ But if the unchanging unsecure configurations are too many, perhaps they can bec
 
 **Summary Solution -** System state is stored in combination of git and secure/unsecure config versioned stores.
 ### 4. Approved changes that can be automatically applied to the system
-This principle is issue #2 - PR approval being only trigger for new deployment. 
+**Issue #2 -** PR approval being only trigger for new deployment. 
 
-This principle usually means git PR approval. But hence lies the problem, even with gitops principle of storing secrets in secure store. What if the state of a secret changes? One changes password or some encrypted key? How will that configuration be automatically be pushed by a PR approval?
+This principle usually means git PR approval. But hence lies the problem, if the solution is applies for issue #1 above. What if the state of a secret changes? One changes password or some encrypted key? How will that configuration be automatically be pushed by a PR approval?
 
 **Summary Solution -**
 If gitops suggests "**The entire system described declaratively**" and "**Approved changes that can be automatically applied to the system**" (approval of course, whether manual approval or some automatic super automated testing gates), then CD pipeline should have 2 separate triggers with either/or condition.
