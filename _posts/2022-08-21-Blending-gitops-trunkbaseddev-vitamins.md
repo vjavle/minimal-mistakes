@@ -1,4 +1,4 @@
-# Blending Trunk-dev and gitops
+# gitops+Trunk-dev
 2 hot words in software these days are [**gitops**](https://www.weave.works/technologies/gitops/) and [**trunk based development**](https://trunkbaseddevelopment.com/). I realized some gaps in adapting both at the same time as per prescriptions.
 
 This a quick note describes gitops and trunkbaseddev and their quick pro/cons. But they are plenty of articles out there to know more about these.
