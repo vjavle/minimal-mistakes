@@ -60,7 +60,9 @@ There is not much reservation in tf statefiles in git, except, maybe performance
     - static verified (tested, signed etc.) artifact (whether application bit or tf files, whether zip or container)
     - necessary configuration for env where it is being deployed (conn strings, passwords etc)
 - CD pipeline is responsible to promote this artifact through various environment life cycles e.g. dev, qa, staging, ephemeral etc. by combining  artifacts with secure and unsecure configuration necessary for the environment being deployed.
-![enter image description here](https://github.com/vjavle/vjavle.github.io/blob/master/assets/images/deployments.png)
+
+![CI and CD](https://raw.githubusercontent.com/vjavle/vjavle.github.io/master/assets/images/deployments.svg)
+
 Given this view, configuration fed to artifact can be classified into 4 categories:
 
  1. Secure Configuration unchanging based on environment being deployed
